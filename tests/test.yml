@@ -1,0 +1,4 @@
+---
+- hosts: all
+  roles:
+    - ansible-check-security-updates

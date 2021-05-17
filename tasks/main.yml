@@ -7,6 +7,7 @@
     cmd: yum --security check-update --quiet
     warn: false
   register: check_security_updates_result
+  changed_when: no
 
 - name: set fact regarding if security updates are necessary or not
   ansible.builtin.set_fact:

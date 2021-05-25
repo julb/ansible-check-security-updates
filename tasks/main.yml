@@ -1,6 +1,6 @@
 ---
 
-- name: check if security updates are available
+- name: check if security updates are available # noqa command-instead-of-module
   become: yes
   ignore_errors: "{{ not check_security_updates_fail_if_unpatched }}"
   ansible.builtin.command:

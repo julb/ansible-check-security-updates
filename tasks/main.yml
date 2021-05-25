@@ -3,9 +3,8 @@
 - name: check if security updates are available
   become: yes
   ignore_errors: "{{ not check_security_updates_fail_if_unpatched }}"
-  ansible.builtin.shell:
+  ansible.builtin.command:
     cmd: yum --security check-update --quiet
-    warn: false
   register: check_security_updates_result
   changed_when: no
 
